@@ -1,0 +1,83 @@
+---
+title: "DNA methylation workshop -preparations"
+author: "Shumaila Sayyab"
+date: '2024-11-04'
+output: 
+  pdf_document:
+    toc: true
+    toc_depth: 3
+---
+
+# **Preworkshop setup**
+These steps are required to get you started with the account setup and DNA methylation data analysis. If you already have R and RStudio installed on your laptop then you can start with the DNA methylation packages installation as explained under "R and RStudio". <br>
+However, Inorder for this workshop to go smooth and avoid installation of packages in R (that takes a lot of time), I instead have setup everything at NSC in <span style="color: green;"> Maria Lerm's group project *NAISS 2023/5-510* </span>.
+
+Follow the steps below:
+
+# Step1. NSC account application
+- please request a membership to this project: **NAISS 2023/5-510** at [NSC](https://supr.naiss.se/snic_to_naiss/)
+
+## Request membership to project
+> Go to [SUPR's project membership request function](https://supr.naiss.se/project/request/?search=) to request membership in the NAISS 2023/5-510.<br>
+> If SUPR requests that you log in, use Alternative 1: Login Using SWAMID, select "Linköping University" as your login provider and log in using your LiU student account.<br>
+> Press the Request button on the NAISS 2023/5-510 <br>
+> On the next page, write "workshop" in the "Message to the PI" box and press Request Membership.<br>
+
+## Request an account on the resource
+Once your membership has been approved, you will get emails from NSC /SNIC that "You have been added to the following project in SUPR:" 
+Follow the instructions and check this link https://supr.naiss.se/account/  by logging in. Go the account tab and click **"Request Account on Tetralith @ NSC "**. As shown below.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/OneDrive - Linköpings universitet/BigData_course_at_LiU/2024/Workshop/request_account.png")
+```
+
+You will get emails with your user id, and instructions to setup passport and two factor authentication on your phone. (see some screenshots as an example)
+
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/OneDrive - Linköpings universitet/BigData_course_at_LiU/2024/Workshop/Password_2factor.png")
+```
+
+# Step2. ThinLinc
+We will use [ThinLinc](https://www.cendio.com/) (a remote desktop) to run graphical applications on NSC. 
+
+To install ThinLinc go to https://www.cendio.com/ and choose the appropriate link for your operating system from **Download the ThinLinc client!** link.
+To start ThinLinc open the application and enter the following: 
+
+> Server: tetralith.nsc.liu.se
+
+> Användarnamn: your username
+
+> Lösenord: your password
+
+
+# **Login to NSC**
+Once login is successful, open terminal, and write the commands below.
+
+- if you have macOS we will OPEN  Terminal 
+- if you have windows we will OPEN [Gitbash](https://git-scm.com/downloads/win)
+
+> <span style="color: green;">Great you are all set for now !!</span>
+
+```{r nsc, eval=FALSE, echo=TRUE}
+# Login to NSC
+ssh -X x_USERNAME@tetralith.nsc.liu.se
+
+```
+
+# R and RStudio (optional)
+- If you have R already installed in your own computer, you can as an alternative try to install the packages required for analysis yourself. Though its more time consuming and laborious, therefore we go with step1 and step2.
+
+- please make sure you have a version not older than 4.0.  
+
+- To install R statistical software go to the [r-project.org](https://cran.r-project.org/) and choose the appropriate link for your operating system.
+
+- To install RStudio go to [posit.co](https://posit.co/download/rstudio-desktop/) and choose the appropriate link for your operating system.
+
+Packages to install:
+
+> install.packages("rmarkdown") <br>
+> install.packages("ChAMP") <br>
+> install.packages("minfi") <br>
+> install.packages("limma") <br>
+
